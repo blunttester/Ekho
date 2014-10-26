@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20141026 20:42:40.095" generator="Robot 2.8.5 (Python 2.7.6 on linux2)">
+<suite source="/home/jan/workspace/Ekho/Robot" id="s1" name="Robot">
+<kw type="setup" name="Browser Should Be Closed">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20141026 20:42:40.632" starttime="20141026 20:42:40.632"></status>
+</kw>
+<status status="PASS" endtime="20141026 20:42:40.633" starttime="20141026 20:42:40.631"></status>
+</kw>
+<suite source="/home/jan/workspace/Ekho/Robot/LoginPageTest.robot" id="s1-s1" name="LoginPageTest">
+<test id="s1-s1-t1" name="Valid Login">
+<kw type="kw" name="Given browser is opened to login page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="resources.Open Browser To Login Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141026 20:42:40.653" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8888/login'</msg>
+<status status="PASS" endtime="20141026 20:42:52.357" starttime="20141026 20:42:40.653"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20141026 20:42:52.358" starttime="20141026 20:42:52.357"></status>
+</kw>
+<kw type="kw" name="resources.Login Page Should Be Open">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${WLCM_MSG}</arg>
+</arguments>
+<msg timestamp="20141026 20:42:52.391" level="INFO">Page title is 'Ekho - Log in'.</msg>
+<status status="PASS" endtime="20141026 20:42:52.391" starttime="20141026 20:42:52.359"></status>
+</kw>
+<status status="PASS" endtime="20141026 20:42:52.391" starttime="20141026 20:42:52.358"></status>
+</kw>
+<status status="PASS" endtime="20141026 20:42:52.392" starttime="20141026 20:42:40.652"></status>
+</kw>
+<status status="PASS" endtime="20141026 20:42:52.392" starttime="20141026 20:42:40.651"></status>
+</kw>
+<kw type="kw" name="resources.Then login page should be open">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${WLCM_MSG}</arg>
+</arguments>
+<msg timestamp="20141026 20:42:52.432" level="INFO">Page title is 'Ekho - Log in'.</msg>
+<status status="PASS" endtime="20141026 20:42:52.432" starttime="20141026 20:42:52.397"></status>
+</kw>
+<status status="PASS" endtime="20141026 20:42:52.433" starttime="20141026 20:42:52.393"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20141026 20:42:52.433" critical="yes" starttime="20141026 20:42:40.650"></status>
+</test>
+<doc>Start page test case using the gherkin syntax.
+
+This test case verifies that user can browse to the
+start page of the service.
+
+Test case uses Selenium and variables.</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20141026 20:42:52.437" starttime="20141026 20:42:40.633"></status>
+</suite>
+<kw type="teardown" name="Browser Should Be Closed">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20141026 20:42:52.559" starttime="20141026 20:42:52.445"></status>
+</kw>
+<status status="PASS" endtime="20141026 20:42:52.571" starttime="20141026 20:42:52.445"></status>
+</kw>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20141026 20:42:52.572" starttime="20141026 20:42:40.095"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Robot">Robot</stat>
+<stat fail="0" pass="1" id="s1-s1" name="LoginPageTest">Robot.LoginPageTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
