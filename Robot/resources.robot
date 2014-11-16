@@ -1,6 +1,6 @@
 *** Settings ***
 Library    Selenium2Library
-##Library    chromedriver
+
 
 *** Variables ***
 ${USER}     TestUser1
@@ -12,7 +12,7 @@ ${WLCM_MSG}     Ekho - Log in
 ${MAIN_WLCM_MSG}     Welcome to Ekho
 ${LOGIN URL}        http://${HOST}:${PORT}/login
 @{applications}    app1    app2    app3    app4
-${BROWSER}    Firefox
+${BROWSER}    ff
 
 *** Keywords ***
 Open Browser To Login Page
@@ -23,20 +23,21 @@ Open Browser To Login Page
 
 Login Page Should Be Open
     Title Should Be    ${WLCM_MSG}
-    #Page should contain TextField User
-    #Page should contain TextField Password
-    #Page should contain Login button
+    Page should contain TextField	username
+    Page should contain Element	password
+    Page should contain button	Log In
 
-Go To Login Page
-    Go To    ${LOGIN URL}
-    Login Page Should Be Open
 
-User should be able to log in
-    Main page should be open
-
-Main page should be open
+User Fills Credentials
+	Input Text	username	${USER}
+	Input Text	password	${PWD}
+	
+User Submits Login Credentials
+	Submit Credentials
+	
+Main page should be opened
     Title Should Be    ${MAIN_WLCM_MSG}
 
 Submit Credentials
-    Submit Form     login-form
-    #Click button    button
+    #Submit Form     login-form
+    Click button    Log In

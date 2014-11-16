@@ -5,6 +5,7 @@ Documentation     Start page test case using the gherkin syntax.
 ...               start page of the service.
 ...
 ...               Test case uses Selenium and variables.
+Library    Selenium2Library
 Resource          resources.robot
 
 
