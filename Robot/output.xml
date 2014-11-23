@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20141116 19:05:41.498" generator="Robot 2.8.5 (Python 2.7.6 on darwin)">
+<robot generated="20141123 18:30:47.465" generator="Robot 2.8.5 (Python 2.7.6 on darwin)">
 <suite source="/Users/janmatilainen/Documents/workspace/Ekho/Robot" id="s1" name="Robot">
 <kw type="setup" name="Browser Should Be Closed">
 <doc></doc>
@@ -9,9 +9,9 @@
 <doc>Closes the current browser.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20141116 19:05:41.628" starttime="20141116 19:05:41.628"></status>
+<status status="PASS" endtime="20141123 18:30:47.620" starttime="20141123 18:30:47.620"></status>
 </kw>
-<status status="PASS" endtime="20141116 19:05:41.628" starttime="20141116 19:05:41.627"></status>
+<status status="PASS" endtime="20141123 18:30:47.620" starttime="20141123 18:30:47.619"></status>
 </kw>
 <suite source="/Users/janmatilainen/Documents/workspace/Ekho/Robot/001_LoginPageTest.robot" id="s1-s1" name="001 LoginPageTest">
 <test id="s1-s1-t1" name="Valid Login">
@@ -29,15 +29,15 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20141116 19:05:41.641" level="INFO">Opening browser 'ff' to base url 'http://localhost:8888/login'</msg>
-<status status="PASS" endtime="20141116 19:05:44.756" starttime="20141116 19:05:41.641"></status>
+<msg timestamp="20141123 18:30:47.634" level="INFO">Opening browser 'ff' to base url 'http://localhost:8888/login'</msg>
+<status status="PASS" endtime="20141123 18:30:50.858" starttime="20141123 18:30:47.633"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Set Selenium Speed">
 <doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20141116 19:05:44.757" starttime="20141116 19:05:44.756"></status>
+<status status="PASS" endtime="20141123 18:30:50.859" starttime="20141123 18:30:50.859"></status>
 </kw>
 <kw type="kw" name="resources.Login Page Should Be Open">
 <doc></doc>
@@ -48,26 +48,81 @@
 <arguments>
 <arg>${WLCM_MSG}</arg>
 </arguments>
-<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20141123 18:30:50.870" level="INFO">Page title is 'Ekho - Log in'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.871" starttime="20141123 18:30:50.861"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Page Should Contain Textfield">
+<doc>Verifies text field identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>username</arg>
+</arguments>
+<msg timestamp="20141123 18:30:50.921" level="INFO">Current page contains text field 'username'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.921" starttime="20141123 18:30:50.871"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>password</arg>
+</arguments>
+<msg timestamp="20141123 18:30:50.928" level="INFO">Current page contains element 'password'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.928" starttime="20141123 18:30:50.921"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Page Should Contain Button">
+<doc>Verifies button identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>Log In</arg>
+</arguments>
+<msg timestamp="20141123 18:30:50.941" level="INFO">Current page contains input 'Log In'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.941" starttime="20141123 18:30:50.928"></status>
+</kw>
+<status status="PASS" endtime="20141123 18:30:50.942" starttime="20141123 18:30:50.860"></status>
+</kw>
+<status status="PASS" endtime="20141123 18:30:50.942" starttime="20141123 18:30:47.632"></status>
+</kw>
+<status status="PASS" endtime="20141123 18:30:50.942" starttime="20141123 18:30:47.632"></status>
+</kw>
+<kw type="kw" name="resources.Then login page should be open">
+<doc></doc>
 <arguments>
 </arguments>
-<msg timestamp="20141116 19:05:45.726" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20141116 19:05:45.726" starttime="20141116 19:05:44.770"></status>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${WLCM_MSG}</arg>
+</arguments>
+<msg timestamp="20141123 18:30:50.950" level="INFO">Page title is 'Ekho - Log in'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.950" starttime="20141123 18:30:50.943"></status>
 </kw>
-<msg timestamp="20141116 19:05:45.727" level="FAIL">Title should have been 'Ekho - Log in' but was 'SyntaxError at /login'</msg>
-<status status="FAIL" endtime="20141116 19:05:45.727" starttime="20141116 19:05:44.759"></status>
+<kw type="kw" name="Selenium2Library.Page Should Contain Textfield">
+<doc>Verifies text field identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>username</arg>
+</arguments>
+<msg timestamp="20141123 18:30:50.962" level="INFO">Current page contains text field 'username'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.962" starttime="20141123 18:30:50.950"></status>
 </kw>
-<status status="FAIL" endtime="20141116 19:05:45.728" starttime="20141116 19:05:44.758"></status>
+<kw type="kw" name="Selenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>password</arg>
+</arguments>
+<msg timestamp="20141123 18:30:50.969" level="INFO">Current page contains element 'password'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.969" starttime="20141123 18:30:50.962"></status>
 </kw>
-<status status="FAIL" endtime="20141116 19:05:45.728" starttime="20141116 19:05:41.640"></status>
+<kw type="kw" name="Selenium2Library.Page Should Contain Button">
+<doc>Verifies button identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>Log In</arg>
+</arguments>
+<msg timestamp="20141123 18:30:50.980" level="INFO">Current page contains input 'Log In'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.980" starttime="20141123 18:30:50.969"></status>
 </kw>
-<status status="FAIL" endtime="20141116 19:05:45.728" starttime="20141116 19:05:41.640"></status>
+<status status="PASS" endtime="20141123 18:30:50.981" starttime="20141123 18:30:50.942"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" endtime="20141116 19:05:45.729" critical="yes" starttime="20141116 19:05:41.639">Title should have been 'Ekho - Log in' but was 'SyntaxError at /login'</status>
+<status status="PASS" endtime="20141123 18:30:50.981" critical="yes" starttime="20141123 18:30:47.631"></status>
 </test>
 <doc>Start page test case using the gherkin syntax.
 
@@ -77,7 +132,7 @@ start page of the service.
 Test case uses Selenium and variables.</doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20141116 19:05:45.729" starttime="20141116 19:05:41.628"></status>
+<status status="PASS" endtime="20141123 18:30:50.982" starttime="20141123 18:30:47.621"></status>
 </suite>
 <suite source="/Users/janmatilainen/Documents/workspace/Ekho/Robot/002_MainPageTest.robot" id="s1-s2" name="002 MainPageTest">
 <test id="s1-s2-t1" name="Valid Login">
@@ -90,22 +145,39 @@ Test case uses Selenium and variables.</doc>
 <arguments>
 <arg>${WLCM_MSG}</arg>
 </arguments>
-<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20141123 18:30:50.996" level="INFO">Page title is 'Ekho - Log in'.</msg>
+<status status="PASS" endtime="20141123 18:30:50.996" starttime="20141123 18:30:50.990"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Page Should Contain Textfield">
+<doc>Verifies text field identified by `locator` is found from current page.</doc>
 <arguments>
+<arg>username</arg>
 </arguments>
-<msg timestamp="20141116 19:05:46.688" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20141116 19:05:46.688" starttime="20141116 19:05:45.745"></status>
+<msg timestamp="20141123 18:30:51.007" level="INFO">Current page contains text field 'username'.</msg>
+<status status="PASS" endtime="20141123 18:30:51.007" starttime="20141123 18:30:50.996"></status>
 </kw>
-<msg timestamp="20141116 19:05:46.689" level="FAIL">Title should have been 'Ekho - Log in' but was 'SyntaxError at /login'</msg>
-<status status="FAIL" endtime="20141116 19:05:46.689" starttime="20141116 19:05:45.739"></status>
+<kw type="kw" name="Selenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>password</arg>
+</arguments>
+<msg timestamp="20141123 18:30:51.013" level="INFO">Current page contains element 'password'.</msg>
+<status status="PASS" endtime="20141123 18:30:51.013" starttime="20141123 18:30:51.008"></status>
 </kw>
-<status status="FAIL" endtime="20141116 19:05:46.689" starttime="20141116 19:05:45.738"></status>
+<kw type="kw" name="Selenium2Library.Page Should Contain Button">
+<doc>Verifies button identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>Log In</arg>
+</arguments>
+<msg timestamp="20141123 18:30:51.025" level="INFO">Current page contains input 'Log In'.</msg>
+<status status="PASS" endtime="20141123 18:30:51.025" starttime="20141123 18:30:51.014"></status>
+</kw>
+<status status="PASS" endtime="20141123 18:30:51.025" starttime="20141123 18:30:50.990"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" endtime="20141116 19:05:46.689" critical="yes" starttime="20141116 19:05:45.738">Title should have been 'Ekho - Log in' but was 'SyntaxError at /login'</status>
+<status status="PASS" endtime="20141123 18:30:51.026" critical="yes" starttime="20141123 18:30:50.989"></status>
 </test>
 <test id="s1-s2-t2" name="User Credentials Submission">
 <kw type="kw" name="resources.User Fills Credentials">
@@ -118,23 +190,44 @@ Test case uses Selenium and variables.</doc>
 <arg>username</arg>
 <arg>${USER}</arg>
 </arguments>
-<msg timestamp="20141116 19:05:46.691" level="INFO">Typing text 'TestUser1' into text field 'username'</msg>
-<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20141123 18:30:51.028" level="INFO">Typing text 'TestUser1' into text field 'username'</msg>
+<status status="PASS" endtime="20141123 18:30:51.086" starttime="20141123 18:30:51.028"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${PWD}</arg>
+</arguments>
+<msg timestamp="20141123 18:30:51.087" level="INFO">Typing text 'T3stPwd1' into text field 'password'</msg>
+<status status="PASS" endtime="20141123 18:30:51.139" starttime="20141123 18:30:51.086"></status>
+</kw>
+<status status="PASS" endtime="20141123 18:30:51.139" starttime="20141123 18:30:51.027"></status>
+</kw>
+<kw type="kw" name="resources.User Submits Login Credentials">
+<doc></doc>
 <arguments>
 </arguments>
-<msg timestamp="20141116 19:05:47.624" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20141116 19:05:47.624" starttime="20141116 19:05:46.701"></status>
+<kw type="kw" name="resources.Submit Credentials">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Log In</arg>
+</arguments>
+<msg timestamp="20141123 18:30:51.142" level="INFO">Clicking button 'Log In'.</msg>
+<status status="PASS" endtime="20141123 18:30:51.249" starttime="20141123 18:30:51.141"></status>
 </kw>
-<msg timestamp="20141116 19:05:47.625" level="FAIL">ValueError: Element locator 'username' did not match any elements.</msg>
-<status status="FAIL" endtime="20141116 19:05:47.625" starttime="20141116 19:05:46.691"></status>
+<status status="PASS" endtime="20141123 18:30:51.250" starttime="20141123 18:30:51.141"></status>
 </kw>
-<status status="FAIL" endtime="20141116 19:05:47.625" starttime="20141116 19:05:46.690"></status>
+<status status="PASS" endtime="20141123 18:30:51.250" starttime="20141123 18:30:51.139"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" endtime="20141116 19:05:47.626" critical="yes" starttime="20141116 19:05:46.690">ValueError: Element locator 'username' did not match any elements.</status>
+<status status="PASS" endtime="20141123 18:30:51.250" critical="yes" starttime="20141123 18:30:51.026"></status>
 </test>
 <test id="s1-s2-t3" name="Target Page Validation">
 <kw type="kw" name="resources.Main page should be opened">
@@ -150,18 +243,18 @@ Test case uses Selenium and variables.</doc>
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
 <arguments>
 </arguments>
-<msg timestamp="20141116 19:05:48.629" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20141116 19:05:48.630" starttime="20141116 19:05:47.636"></status>
+<msg timestamp="20141123 18:30:51.351" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20141123 18:30:51.352" starttime="20141123 18:30:51.260"></status>
 </kw>
-<msg timestamp="20141116 19:05:48.630" level="FAIL">Title should have been 'Welcome to Ekho' but was 'SyntaxError at /login'</msg>
-<status status="FAIL" endtime="20141116 19:05:48.630" starttime="20141116 19:05:47.628"></status>
+<msg timestamp="20141123 18:30:51.354" level="FAIL">Title should have been 'Welcome to Ekho' but was '403 Forbidden'</msg>
+<status status="FAIL" endtime="20141123 18:30:51.354" starttime="20141123 18:30:51.253"></status>
 </kw>
-<status status="FAIL" endtime="20141116 19:05:48.630" starttime="20141116 19:05:47.627"></status>
+<status status="FAIL" endtime="20141123 18:30:51.354" starttime="20141123 18:30:51.252"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" endtime="20141116 19:05:48.631" critical="yes" starttime="20141116 19:05:47.626">Title should have been 'Welcome to Ekho' but was 'SyntaxError at /login'</status>
+<status status="FAIL" endtime="20141123 18:30:51.354" critical="yes" starttime="20141123 18:30:51.251">Title should have been 'Welcome to Ekho' but was '403 Forbidden'</status>
 </test>
 <doc>Start page test case using the gherkin syntax.
 
@@ -171,7 +264,7 @@ start page of the service.
 Test case uses Selenium and variables.</doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20141116 19:05:48.632" starttime="20141116 19:05:45.730"></status>
+<status status="FAIL" endtime="20141123 18:30:51.355" starttime="20141123 18:30:50.983"></status>
 </suite>
 <kw type="teardown" name="Browser Should Be Closed">
 <doc></doc>
@@ -181,26 +274,26 @@ Test case uses Selenium and variables.</doc>
 <doc>Closes the current browser.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20141116 19:05:48.689" starttime="20141116 19:05:48.635"></status>
+<status status="PASS" endtime="20141123 18:30:51.415" starttime="20141123 18:30:51.358"></status>
 </kw>
-<status status="PASS" endtime="20141116 19:05:48.690" starttime="20141116 19:05:48.634"></status>
+<status status="PASS" endtime="20141123 18:30:51.416" starttime="20141123 18:30:51.357"></status>
 </kw>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20141116 19:05:48.690" starttime="20141116 19:05:41.499"></status>
+<status status="FAIL" endtime="20141123 18:30:51.416" starttime="20141123 18:30:47.465"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="4" pass="0">Critical Tests</stat>
-<stat fail="4" pass="0">All Tests</stat>
+<stat fail="1" pass="3">Critical Tests</stat>
+<stat fail="1" pass="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="4" pass="0" id="s1" name="Robot">Robot</stat>
-<stat fail="1" pass="0" id="s1-s1" name="001 LoginPageTest">Robot.001 LoginPageTest</stat>
-<stat fail="3" pass="0" id="s1-s2" name="002 MainPageTest">Robot.002 MainPageTest</stat>
+<stat fail="1" pass="3" id="s1" name="Robot">Robot</stat>
+<stat fail="0" pass="1" id="s1-s1" name="001 LoginPageTest">Robot.001 LoginPageTest</stat>
+<stat fail="1" pass="2" id="s1-s2" name="002 MainPageTest">Robot.002 MainPageTest</stat>
 </suite>
 </statistics>
 <errors>

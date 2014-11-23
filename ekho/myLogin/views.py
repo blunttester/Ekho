@@ -30,6 +30,6 @@ def login_user(request):
     
     
 
-@login_required(login_url='login/') #if not logged in redirect to /
+@login_required(login_url='/') #if not logged in redirect to /
 def home(request):        
     return render('index.html', context_instance=RequestContext(request))
